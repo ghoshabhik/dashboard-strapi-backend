@@ -1,7 +1,7 @@
 module.exports = {
     settings: {
       cors: {
-        origin: ['http://localhost', 'https://example.com', 'https://dashboard-strapi-backend.herokuapp.com'],
+        origin: ['http://localhost:3000', 'https://example.com', 'https://dashboard-strapi-backend.herokuapp.com'],
       },
     },
   };
