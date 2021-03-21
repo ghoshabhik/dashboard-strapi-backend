@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exams",
+  "info": {
+    "name": "Exam"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ExamName": {
+      "type": "string"
+    }
+  }
+}
