@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/projects/updateStatus",
+      "handler": "project.updateStatus",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/projects/getAll",
       "handler": "project.getAll",
       "config": {

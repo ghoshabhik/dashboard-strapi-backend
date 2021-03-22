@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/jobs/updateStatus",
+      "handler": "job.updateStatus",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/jobs/getAll",
       "handler": "job.getAll",
       "config": {

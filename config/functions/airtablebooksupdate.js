@@ -8,14 +8,11 @@ module.exports = async (id, status) => {
         headers: { Authorization: `Bearer ${AIRTABLE_API_TOKEN}`, 'Content-Type': 'application/json'}
     };
     
-    const { data } = await axios.get(`https://api.airtable.com/v0/appnJyGDL7ilErfRQ/examtopics/${id}`, config);
+    const { data } = await axios.get(`https://api.airtable.com/v0/appnJyGDL7ilErfRQ/books/${id}`, config);
     
     var updatedData = data;
     updatedData.fields.Status = status;
     delete updatedData.createdTime;
-    delete updatedData.fields.ExamName;
-    delete updatedData.fields.ExamPlannedDate;
-    delete updatedData.fields.ExamRegistered;
     const patchData = {records: [updatedData]}
 
     // const config = {
@@ -26,7 +23,7 @@ module.exports = async (id, status) => {
     try{
         console.log(patchData.records[0].fields)
         
-         const resp = await axios.patch('https://api.airtable.com/v0/appnJyGDL7ilErfRQ/examtopics', patchData , config  )
+         const resp = await axios.patch('https://api.airtable.com/v0/appnJyGDL7ilErfRQ/books', patchData , config  )
 
         // respdata = await resp.json()
         //console.log(resp)

@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/books/updateStatus",
+      "handler": "book.updateStatus",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/books/getAll",
       "handler": "book.getAll",
       "config": {
