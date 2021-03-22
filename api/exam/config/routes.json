@@ -1,5 +1,14 @@
 {
   "routes": [
+    
+    {
+      "method": "GET",
+      "path": "/exams/updateStatus",
+      "handler": "exam.updateStatus",
+      "config": {
+        "policies": []
+      }
+    },
     {
       "method": "GET",
       "path": "/exams/getAll",
